@@ -31,8 +31,9 @@
 		<th>kasutaja id</th>
 		<th>numbrimärk</th>
 		<th>värvus</th>
-		<th>kustuta</th>
+		<th>X</th>
 		<th>edit</th>
+		<th>editi minek</th>
 	
 	</tr>
 <?php
@@ -44,7 +45,7 @@
 				
 			echo"<tr>";
 			echo"<form action='table.php' method='post'>";
-			echo"<input type='hidden' name='id' value='".$car_array[$i]->id."'>";
+			echo"<input type='hidden' name='id' value='".$array_of_cars[$i]->id."'>";
 			echo"<td>".$array_of_cars[$i]->id."</td>";
 			echo"<td>".$array_of_cars[$i]->user_id."</td>";
 			echo"<td><input name='plate_number' value='".$array_of_cars[$i]->plate."'></td>";
@@ -62,7 +63,9 @@
 			echo"<td>".$array_of_cars[$i]->color."</td>";
 			echo"<td><a href='?delete=".$array_of_cars[$i]->id."'>X</a><td>";
 			echo"<td><a href='?edit=".$array_of_cars[$i]->id."'>edit</a><td>";
+			echo"<td><a href='edit.php?edit_id=".$array_of_cars[$i]->id."'>editi minek</a><td>";
 			echo"</tr>";
+			
 				
 				
 				
